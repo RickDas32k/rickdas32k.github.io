@@ -20,4 +20,13 @@ class AdminController extends Controller
         $data->save();
         return redirect()->back();
     }
+
+    public function view_product()
+    {
+        return view('admin.product');
+    }
+    public function add_product(Request $request)
+    {
+
+    }
 }

@@ -11,11 +11,19 @@
                      <div class="option_container">
                         <div class="options">
                            <a href="" class="option1">
-                           Men's Shirt
+                           product details
                            </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
+                           <form action="" method="post">
+                              
+                              <div class="row">
+                                 <div class="col-md-4">
+                                    <input type="number" name="quantity" value="1" min="1">
+                                 </div>
+                                 <div class="co-md-4">
+                                    <input type="submit" value="Add to cart">
+                                 </div>
+                              </div>
+                           </form>
                         </div>
                      </div>
                      <div class="img-box">
@@ -31,6 +39,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -56,6 +65,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -81,6 +91,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -106,6 +117,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -131,6 +143,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -156,6 +169,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -181,6 +195,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -206,6 +221,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -231,6 +247,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -256,6 +273,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -281,6 +299,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
@@ -307,6 +326,7 @@
                   </div>
                </div>
             </div>
+            
             <div class="btn-box">
                <a href="">
                View All products

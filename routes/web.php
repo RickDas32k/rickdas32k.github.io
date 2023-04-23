@@ -33,3 +33,12 @@ route::get('/redirect',[HomeController::class,'redirect']);
 route::get('/view_catagory',[AdminController::class,'view_catagory']);
 
 route::post('/add_catagory',[AdminController::class,'add_catagory']);
+
+route::get('/view_product',[AdminController::class,'view_product']);
+
+route::post('/add_product',[AdminController::class,'add_product']);
+
+
+// route::get('/product_details/{id}',[HomeController::class,'product details']);
+
+// route::Post('/add_cart/{id}',[HomeController::class,'add_cart']);
