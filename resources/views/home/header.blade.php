@@ -32,10 +32,11 @@
                            </button>
                         </form>
                         @if (Route::has('login'))
+
                         @auth
 
                         <li class="nav-item">
-
+                           
                         </li>
 
                         @else
