@@ -11,19 +11,19 @@
         }
         .font_size
         {
-            font-size: 40px;
+            font-size: 30px;
             padding-bottom: 40px;
         }
         .text_color{
             color: black;
             padding-bottom: 20px;
         }
-        .label{
+        label{
             display: inline-block;
             width: 200px;
         }
         .div_design{
-            padding-bottom: 50px;
+            padding-bottom: 30px;
         }
         </style>
   </head>
@@ -54,6 +54,15 @@
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
+
+            @if(session()->has('massage'))
+            <div class="alert alert-success">
+
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+            {{session()->get('massage')}}
+            </div>
+            @endif
+
                 <div class="div_center">
                     <h1 class="font_size">Add Product</h1>
 
@@ -81,14 +90,16 @@
 
                 <div class="div_design">
                     <label>Product Quantity</label>
-                    <input class="text_color" type="number" min="0" name="quantity" placeholder="write a title" required="">
+                    <input class="text_color" type="number" min="0" name="quantity" placeholder="write quantity" required="">
                 </div>
 
                 <div class="div_design">
                     <label>Product Category</label>
                     <select class="text_color" name="category" required="">
                         <option value="" selected="">Add a category here</option>
-                        <option>shirt</option>
+                        
+                        <option value="">shirt</option>
+                      
                     </select>
                 </div>
 
