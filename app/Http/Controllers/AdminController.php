@@ -12,7 +12,8 @@ class AdminController extends Controller
 {
     public function view_catagory()
     {
-        return view('admin.catagory');
+        $data=catagory::all();
+        return view('admin.catagory',compact('data'));
     }
 
     public function add_catagory(Request $request)
@@ -20,7 +21,14 @@ class AdminController extends Controller
         $data=new catagory;
         $data->catagory_name=$request->catagory;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','Catagory Added Successfully');
+    }
+
+    public function delete_catagory($id)
+    {
+        $data=catagory::find($id);
+        $data->delete();
+        return redirect()->back()->with('message','Catagory Deleted Successfully');
     }
 
     public function view_product()
