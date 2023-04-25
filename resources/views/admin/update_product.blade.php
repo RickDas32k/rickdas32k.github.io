@@ -70,36 +70,35 @@
                 <form action="{{url('/update_product_confirm',$product->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="div_design">
-                    <label>Product Title</label>
+                    <label>Product Title : </label>
                     <input class="text_color" type="text" name="title" placeholder="write a title" required="" value="{{$product->title}}">
                 </div>
 
                 <div class="div_design">
-                    <label>Product Description</label>
+                    <label>Product Description : </label>
                     <input class="text_color" type="text" name="description" placeholder="write description" required="" value="{{$product->description}}">
                 </div>
 
                 <div class="div_design">
-                    <label>Product Price</label>
+                    <label>Product Price : </label>
                     <input class="text_color" type="number" name="price" placeholder="write a price" required="" value="{{$product->price}}">
                 </div>
 
                 <div class="div_design">
-                    <label>Discount Price</label>
+                    <label>Discount Price : </label>
                     <input class="text_color" type="number" name="dis_price" placeholder="write a discount" value="{{$product->discount_price}}" > 
                 </div>
 
                 <div class="div_design">
-                    <label>Product Quantity</label>
+                    <label>Product Quantity : </label>
                     <input class="text_color" type="number" min="0" name="quantity" placeholder="write quantity" required="" value="{{$product->quantity}}">
                 </div>
 
                 <div class="div_design">
-                    <label>Product Catagory</label>
+                    <label>Product Catagory : </label>
                     <select class="text_color" name="catagory" required="">
-                        <option value="value={{$product->catagory}}" selected="">Add a catagory here</option>
+                        <option value="{{$product->catagory}}" selected="">{{$product->catagory}}"</option>
                         
-                        <option value="">shirt</option>
                       
                     </select>
                 </div>

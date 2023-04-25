@@ -12,7 +12,7 @@
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="{{url('product_details',$products->id)}}" class="option1">
                            product details
                            </a>
                            <form action="" method="post">
