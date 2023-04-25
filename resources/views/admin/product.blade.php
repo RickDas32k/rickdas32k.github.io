@@ -99,7 +99,11 @@
                         <option value="" selected="">Add a category here</option>
                         
                         <option value="">shirt</option>
-                      
+                        <option value="">tops</option>
+                        <option value="">geans</option>
+                        <option value="">tshirt</option>
+                        <option value="">dress</option>
+                        <option value="">jacket</option>
                     </select>
                 </div>
 
