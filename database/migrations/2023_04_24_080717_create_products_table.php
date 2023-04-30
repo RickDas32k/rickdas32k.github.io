@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('catagory')->nullable();
             $table->string('quantity')->nullable();
             $table->string('price')->nullable();
-            $table->string('discount price')->nullable();
+            $table->string('discount_price')->nullable();
             $table->timestamps();
         });
     }

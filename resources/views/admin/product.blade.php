@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="div_design">
-                    <label>Product Catagory</label>
+                    <label>Product Catagory : </label>
                     <select class="text_color" name="catagory" required="">
                         <option value="" selected="">Add a catagory here</option>
                         @foreach($catagory as $catagory)
