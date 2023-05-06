@@ -12,6 +12,8 @@ use App\Models\Product;
 
 use App\Models\Cart;
 
+use App\Models\order;
+
 class HomeController extends Controller
 {
     public function index()
@@ -119,6 +121,17 @@ class HomeController extends Controller
     $cart->delete();
 
     return redirect()->back();
+
+ }
+
+
+ public function cash_order()
+ {
+    $user=Auth::user();
+    $userid=$user->id;
+
+    dd($userid);
+
 
  }
 
