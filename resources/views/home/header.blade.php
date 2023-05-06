@@ -34,21 +34,31 @@
                            <i class="fa fa-search" aria-hidden="true"></i>
                            </button>
                         </form>
+
                         @if (Route::has('login'))
 
                         @auth
 
                         <li class="nav-item">
-                           
+                           <form method="POST" action="{{ route('logout') }}" class="inline">
+                              @csrf
+                              <button type="submit" id="logincss" class="btn btn-primary">
+                                 {{_('Log Out')}}
+                              </button>
+                           </form>
+
                         </li>
 
                         @else
+
                         <li class="nav-item">
                            <a class="btn btn-primary" id="logincss" href="{{ route('login') }}">Login</a>
                         </li>
+
                         <li class="nav-item">
                            <a class="btn btn-success" href="{{ route('register') }}">Register</a>
                         </li>
+
                         @endauth
                         
                         @endif
