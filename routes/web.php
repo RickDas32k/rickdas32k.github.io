@@ -52,13 +52,8 @@ route::get('/product_details/{id}',[HomeController::class,'product_details']);
 
 route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
 
-route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
+route::get('show_cart',[HomeController::class,'show_cart']);
 
-<<<<<<< HEAD
 route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
 
 route::post('/add_comment',[HomeController::class,'add_comment']);
-=======
-
-route::get('/cash_order',[HomeController::class,'cash_order']);
->>>>>>> 4697bb8f6a8b16025d5d9a680ce733b07b4cb3eb
