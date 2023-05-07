@@ -12,7 +12,11 @@ use App\Models\Product;
 
 use App\Models\Cart;
 
+<<<<<<< HEAD
 use App\Models\Comment;
+=======
+use App\Models\order;
+>>>>>>> 4697bb8f6a8b16025d5d9a680ce733b07b4cb3eb
 
 class HomeController extends Controller
 {
@@ -125,6 +129,7 @@ class HomeController extends Controller
 
  }
 
+<<<<<<< HEAD
 public function add_comment(Request $request)
 {
     if(Auth::id())
@@ -140,6 +145,19 @@ public function add_comment(Request $request)
     else{
         return redirect('login');
     }
+=======
+
+ public function cash_order()
+ {
+    $user=Auth::user();
+    $userid=$user->id;
+
+    dd($userid);
+
+
+ }
+
+>>>>>>> 4697bb8f6a8b16025d5d9a680ce733b07b4cb3eb
 }
 
 }
