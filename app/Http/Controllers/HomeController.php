@@ -14,8 +14,6 @@ use App\Models\Cart;
 
 use App\Models\Comment;
 
-use RealRashid\SweetAlert\Facades\Alert;+-
-
 class HomeController extends Controller
 {
     public function index()
@@ -87,8 +85,6 @@ class HomeController extends Controller
          $cart->quantity=$request->quantity;
 
          $cart->save();
-
-         Alert::success('Product Added Successfully','We have added product to the cart');
 
          return redirect()->back();
 
