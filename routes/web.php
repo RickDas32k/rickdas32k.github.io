@@ -55,3 +55,5 @@ route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
 route::get('show_cart',[HomeController::class,'show_cart']);
 
 route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
+
+route::post('/add_comment',[HomeController::class,'add_comment']);
