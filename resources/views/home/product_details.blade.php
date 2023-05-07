@@ -56,7 +56,7 @@
                         <h6>Product Catagory : {{$product->catagory}}</h6>
                         <h6>Product Details : {{$product->description}}</h6>
                         <h6>Available Quantity : {{$product->quantity}}</h6>
-                        <form action="{{url('add_cart',$product->id)}}" method="post">
+                        <form action="{{url('add_cart',$product->id)}}" method="Post">
 
                               @csrf
 
@@ -64,7 +64,7 @@
 
                                  <div class="col-md-4">
 
-                                    <input type="number" name="Quantity" vale="1" min="1" style="width: 100px"> 
+                                    <input type="number" name="Quantity" value="1" min="1" style="width: 100px"> 
 
                                  </div>
                               

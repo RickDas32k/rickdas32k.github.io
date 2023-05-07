@@ -15,7 +15,7 @@
                            <a href="{{url('product_details',$products -> id)}}" class="option1">
                            product details
                            </a>
-                           <form action="{{url('add_cart',$products->id)}}" method="post">
+                           <form action="{{url('add_cart',$products->id)}}" method="Post">
 
                               @csrf
 
@@ -23,7 +23,7 @@
 
                                  <div class="col-md-4">
 
-                                    <input type="number" name="Quantity" vale="1" min="1" style="width: 100px"> 
+                                    <input type="number" name="quantity" value="1" min="1" style="width: 100px"> 
 
                                  </div>
                               
