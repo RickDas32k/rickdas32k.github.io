@@ -72,7 +72,7 @@
 
             <a href="javascript::void(0);" onclick="reply(this)">Reply</a>
          </div> 
-
+      
         
       <div style="display: none;" class="replyDiv">
          <textarea style="height: 100px; width: 500px;" placeholder="Write something here..."></textarea>

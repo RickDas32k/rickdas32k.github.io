@@ -27,8 +27,6 @@
          <!-- header section strats -->
          @include('home.header')
          <!-- end header section -->
-      </div>
-            
       <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto; width: 50%; padding: 30px;">
                   <div class="box">
 
@@ -75,10 +73,9 @@
                                     <input type="submit" value="Add to Cart">
                                  </div>
 
-                                 <input type="submit" value="Add to Cart">
                               </div>
 
-                           </form>
+                        </form>
                      </div>
                   </div>
                </div>

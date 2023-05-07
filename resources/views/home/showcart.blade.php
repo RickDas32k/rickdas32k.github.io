@@ -74,9 +74,9 @@
         <div class="center">
             <table>
                 <tr>
-                    <th class="th_deg">Product title</th>
-                    <th class="th_deg">product quantity</th>
-                    <th class="th_deg">price</th>
+                    <th class="th_deg">Product Title</th>
+                    <th class="th_deg">Product Quantity</th>
+                    <th class="th_deg">Price</th>
                     <th class="th_deg">Image</th>
                     <th class="th_deg">Action</th>
                 </tr>
