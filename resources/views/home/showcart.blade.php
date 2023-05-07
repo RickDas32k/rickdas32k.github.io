@@ -20,6 +20,8 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
+      <!-- Sweet Alert cdn link -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
       <style type="text/css">
 
@@ -61,6 +63,9 @@
       </style>
    </head>
    <body>
+
+    @include('sweetalert::alert')
+
       <div class="hero_area">
          <!-- header section strats -->
          @include('home.header')
@@ -70,6 +75,14 @@
          <!-- end slider section -->
       
       <!-- why section -->
+
+      @if(session()->has('message'))
+            <div class="alert alert-success">
+
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+            {{session()->get('message')}}
+            </div>
+            @endif
      
         <div class="center">
             <table>
@@ -91,7 +104,7 @@
                    <td>{{$cart->price}}/-</td>
                    <td><img calss="img_deg" src="/product/{{$cart->image}}"></td>
                    <td>
-                     <a class="btn btn-danger" onclick="return confirm('Are you sure to remove this product ?')" href="{{url('remove_cart',$cart->id)}}">Remove Product</a></td>
+                     <a class="btn btn-danger" onclick="confirmation(event)" href="{{url('remove_cart',$cart->id)}}">Remove Product</a></td>
                     
                 </tr>
 
@@ -112,7 +125,7 @@
 
             <h1 style="font-size: 25px; padding-bottom: 15px;">Proceed to Order</h1>
 
-            <a href="" class="btn btn-danger">Cash on Delivery</a>
+            <a href="{{url('cash_order')}}" class="btn btn-danger">Cash on Delivery</a>
 
             <a href="" class="btn btn-danger">Pay Using Card</a>
         </div>
@@ -128,6 +141,29 @@
          
          </p>
       </div>
+
+      <script>
+          function confirmation(ev){
+            ev.preventDefault();
+            var urlToRedirect = ev.currentTarget.getAttribute('href');
+            console.log(urlToRedirect);
+            swal({
+                title: "Are you sure to cancel this product",
+                text: "You will not be able to revert this!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willCancel) => {
+                if (willCancel) {
+
+
+                    window.location.href = urlToRedirect;
+                }
+                });
+            }
+      </script>
+
       <!-- jQery -->
       <script src="home/js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->

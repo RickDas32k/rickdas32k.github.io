@@ -54,7 +54,7 @@ class AdminController extends Controller
 
 
         $product->save();
-        return redirect()->back()->with('massage','Product Added Successfully');
+        return redirect()->back()->with('message','Product Added Successfully');
     }
 
     public function show_product()
@@ -68,7 +68,7 @@ class AdminController extends Controller
         $product=product::find($id);
         $product->delete();
 
-        return redirect()->back()->with('massage','Product Deleted Successfully');
+        return redirect()->back()->with('message','Product Deleted Successfully');
     }
 
     public function update_product($id)
@@ -101,6 +101,6 @@ class AdminController extends Controller
             $product->image=$imagename;
         }
         $product->save();
-        return redirect()->back()->with('massage','Product Updated Successfully');
+        return redirect()->back()->with('message','Product Updated Successfully');
     }
 }

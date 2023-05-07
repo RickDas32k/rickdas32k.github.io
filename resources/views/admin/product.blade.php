@@ -55,11 +55,11 @@
         <div class="main-panel">
             <div class="content-wrapper">
 
-            @if(session()->has('massage'))
+            @if(session()->has('message'))
             <div class="alert alert-success">
 
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
-            {{session()->get('massage')}}
+            {{session()->get('message')}}
             </div>
             @endif
 
