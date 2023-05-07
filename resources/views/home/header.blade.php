@@ -39,7 +39,12 @@
                         @auth
 
                         <li class="nav-item">
-                           
+                           <form method="POST" action="{{ route('logout') }}" class="inline">
+                              @csrf
+                              <button type="submit" id="logincss" class="btn btn-primary">
+                                 {{_('Log Out')}}
+                              </button>
+                           </form>
                         </li>
 
                         @else
