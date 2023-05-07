@@ -108,7 +108,7 @@
         </div>
 
 
-        <dev>
+        <div>
 
             <h1 style="font-size: 25px; padding-bottom: 15px;">
             proceed to order</h1>
@@ -116,7 +116,7 @@
             <a href="" class="btn btn-danger">Cash on Delivery</a>
 
             <a href="" class="btn btn-danger">Pay Using Card</a>
-        </dev>
+        </div>
 
 
       <!-- footer start -->
