@@ -12,8 +12,6 @@ use App\Models\Product;
 
 use App\Models\Cart;
 
-use App\Models\Comment;
-
 class HomeController extends Controller
 {
     public function index()
@@ -30,8 +28,7 @@ class HomeController extends Controller
         }
         else{
             $product=Product::paginate(10);
-            $comment=comment::all();
-            return view('home.userpage',compact('product','comment'));
+            return view('home.userpage',compact('product'));
         }
     }
 
@@ -124,22 +121,5 @@ class HomeController extends Controller
     return redirect()->back();
 
  }
-
-public function add_comment(Request $request)
-{
-    if(Auth::id())
-    {
-        $comment=new comment;
-        $comment->name=Auth::user()->name;
-
-        $comment->user_id=Auth::user()->id;
-        $comment->comment=$request->comment;
-        $comment->save();
-        return redirect()->back();
-    }
-    else{
-        return redirect('login');
-    }
-}
 
 }
