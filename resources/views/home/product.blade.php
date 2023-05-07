@@ -23,7 +23,11 @@
 
                                  <div class="col-md-4">
 
+<<<<<<< HEAD
+                                    <input type="number" name="Quantity" value="1" min="1" style="width: 100px"> 
+=======
                                     <input type="number" name="quantity" value="1" min="1" style="width: 100px"> 
+>>>>>>> aa3d4d867eee61e180963d1dfe91d1914f8b9911
 
                                  </div>
                               
