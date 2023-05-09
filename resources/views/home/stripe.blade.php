@@ -28,7 +28,7 @@
     
                     <form 
                             role="form" 
-                            action=" " 
+                            action="{{route('stripe.post')}}" 
                             method="post" 
                             class="require-validation"
                             data-cc-on-file="false"

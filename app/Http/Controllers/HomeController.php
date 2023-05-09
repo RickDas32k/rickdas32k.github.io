@@ -18,7 +18,9 @@ use App\Models\Comment;
 
 use RealRashid\SweetAlert\Facades\Alert;
 
+use Session;
 
+use Stripe;
 
 class HomeController extends Controller
 {
@@ -186,5 +188,20 @@ public function stripe($totalprice)
 
     return view('home.stripe',compact('totalprice'));
 }
+public function stripePost(Request $request)
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+    
+        Stripe\Charge::create ([
+                "amount" => 100 * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "Thanks For Payment." 
+        ]);
+      
+        Session::flash('success', 'Payment successful!');
+              
+        return back();
+    }
 
 }
