@@ -61,3 +61,4 @@ route::post('/add_comment',[HomeController::class,'add_comment']);
 route::get('/cash_order',[HomeController::class,'cash_order']);
 
 route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
+

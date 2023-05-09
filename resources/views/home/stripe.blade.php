@@ -28,7 +28,7 @@
     
                     <form 
                             role="form" 
-                            action="{{ route('stripe.post')}}" 
+                            action=" " 
                             method="post" 
                             class="require-validation"
                             data-cc-on-file="false"
@@ -78,7 +78,7 @@
     
                         <div class="row">
                             <div class="col-xs-12">
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now</button>
                             </div>
                         </div>
                             
