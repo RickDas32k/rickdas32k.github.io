@@ -64,7 +64,9 @@
    </head>
    <body>
 
-    @include('sweetalert::alert')
+        
+   
+   @include('sweetalert::alert')
 
       <div class="hero_area">
          <!-- header section strats -->
