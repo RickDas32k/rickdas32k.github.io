@@ -26,7 +26,7 @@
 
 <div class="container">
 
-    <h1 style="text-align: center; font-size: 24px; padding-bottom: 20px">Pay Using Your Card - Total Amount ${{$totalprice}}</h1>
+    <h1 style="text-align: center; font-size: 24px; padding-bottom: 20px">Pay Using Your Card - Total Amount ₹{{$totalprice}}</h1>
     
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -70,7 +70,7 @@
     
                         <div class='form-row row'>
                             <div class='col-xs-12 col-md-4 form-group cvc required'>
-                                <label class='control-label'>CVC</label> <input autocomplete='off'
+                                <label class='control-label'>CVV</label> <input autocomplete='off'
                                     class='form-control card-cvc' placeholder='ex. 311' size='4'
                                     type='text'>
                             </div>

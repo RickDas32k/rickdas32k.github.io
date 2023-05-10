@@ -54,16 +54,6 @@ route::get('/order',[AdminController::class,'order']);
 route::get('/delivered/{id}',[AdminController::class,'delivered']);
 
 
-
-
-
-
-
-
-
-
-
-
 route::get('/product_details/{id}',[HomeController::class,'product_details']);
 
 route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
@@ -79,3 +69,5 @@ route::get('/cash_order',[HomeController::class,'cash_order']);
 route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
 
 route::post('stripe/{totalprice}',[HomeController::class,'stripePost'])->name('stripe.post');
+
+route::get('/products',[HomeController::class,'product']);
