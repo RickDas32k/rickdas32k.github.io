@@ -52,9 +52,9 @@ route::get('/order',[AdminController::class,'order']);
 
 
 
+route::get('/print_pdf/{id}',[AdminController::class,'print_pdf']);
+
 route::get('/delivered/{id}',[AdminController::class,'delivered']);
-
-
 
 route::get('/product_details/{id}',[HomeController::class,'product_details']);
 

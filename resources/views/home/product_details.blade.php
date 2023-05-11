@@ -28,61 +28,68 @@
     />
    </head>
    <body>
+
+   @include('sweetalert::alert')
       <div class="hero_area">
          <!-- header section strats -->
          @include('home.header')
          <!-- end header section -->
 
-
-      <div class="container-2 single-product">
-        <div class="row">
-            <div class="col-new">
-                <img src="product/{{$product->image}}" width="60%" id="productimg">
-            </div>
-            <div class="col-2">
-                <p>Home / {{$product->title}}</p>
-                <h1>{{$product->title}}</h1>
-                
-                @if($product->discount_price!=null)
-                        <H4 style="color: red">
-                        Discount Price<br>
-                           ₹{{$product->discount_price}}
-                        </H4>
-                        
-                        <H4 style="text-decoration: line-through; color: blue">
-                        Price<br>
-                           ₹{{$product->price}}
-                        </H4>
-                        @else
-                        <H4 style="color: blue">
-                        Price<br>
-                           ₹{{$product->price}}
-                        </H4>
-                        @endif
-               <div class="btn-add2">
-               <form action="{{url('add_cart',$product->id)}}" method="Post">
-
-                  @csrf
-
-
-                        
-
-                  <input type="number" name="Quantity" value="1" min="1" style="width: 100px">         
-                        <br>
-                  
-                     <input type="submit" value="Add to Cart"></a>
-            
-                  
-               </form>
+         
+         <div class="container-2 single-product">
+         <div class="row">
+               <div class="col-new">
+                  <img src="product/{{$product->image}}" id="productimg">
                </div>
-                <h3>Product Details <i class="fas fa-indent"></i></h3>
-             
-                <p><b>Catagory:</b> {{$product->catagory}}</p>
-                <p><b>Details:</b>  {{$product->description}}</p>
-                <p><b>Available Quantity:</b>  {{$product->quantity}}</p>
-            </div>
-        </div>
-    </div>
+               <div class="col-2">
+                  <p>Home / {{$product->title}}</p>
+                  <h1>{{$product->title}}</h1>
+                  
+                  @if($product->discount_price!=null)
+                           <H4 style="color: red">
+                           Discount Price<br>
+                              ₹{{$product->discount_price}}
+                           </H4>
+                           
+                           <H4 style="text-decoration: line-through; color: blue">
+                           Price<br>
+                              ₹{{$product->price}}
+                           </H4>
+                           @else
+                           <H4 style="color: blue">
+                           Price<br>
+                              ₹{{$product->price}}
+                           </H4>
+                           @endif
+                  <div class="btn-add2">
+                  <form action="{{url('add_cart',$product->id)}}" method="Post">
+
+                     @csrf
+
+
+                           
+
+                     <input type="number" name="Quantity" value="1" min="1" style="width: 100px">         
+                           <br>
+                     
+                        <input type="submit" value="Add to Cart"></a>
+               
+                     
+                  </form>
+                  </div>
+                  <h3>Product Details <i class="fas fa-indent"></i></h3>
+               
+                  <p><b>Catagory:</b> {{$product->catagory}}</p>
+                  <div class="des">
+                  <p><b>Details:</b>  {{$product->description}}</p>
+                  </div>
+                  <p><b>Available Quantity:</b>  {{$product->quantity}}</p>
+               </div>
+         </div>
+         </div>
+         
+         
+      </div>
 
 
       <!-- footer start -->
