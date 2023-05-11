@@ -7,9 +7,9 @@
                         <a href="#"><img width="210" src="images/logo.png" alt="#" /></a>
                       </div>
                       <div class="information_f">
-                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
-                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                        <p><strong>ADDRESS:</strong> Chuchura, Hooghly, WB, India</p>
+                        <p><strong>MOBILE:</strong> +91 62X XXX XXXX</p>
+                        <p><strong>EMAIL:</strong> yourfamms@gmail.com</p>
                       </div>
                    </div>
                </div>
@@ -34,7 +34,7 @@
                      <div class="widget_menu">
                         <h3>Account</h3>
                         <ul>
-                           <li><a href="#">Account</a></li>
+                           <li><a href="http://localhost:8000/user/profile">Account</a></li>
                            <li><a href="#">Checkout</a></li>
                            <li><a href="#">Login</a></li>
                            <li><a href="#">Register</a></li>
