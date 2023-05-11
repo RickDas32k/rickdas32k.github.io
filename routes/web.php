@@ -50,13 +50,10 @@ route::post('/update_product_confirm/{id}',[AdminController::class,'update_produ
 
 route::get('/order',[AdminController::class,'order']);
 
-<<<<<<< HEAD
 
 route::get('/delivered/{id}',[AdminController::class,'delivered']);
 
 
-=======
->>>>>>> f6046d9de2257d2b3c174073c70f22d56e7f6476
 route::get('/product_details/{id}',[HomeController::class,'product_details']);
 
 route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
@@ -68,8 +65,6 @@ route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
 route::post('/add_comment',[HomeController::class,'add_comment']);
 
 route::get('/cash_order',[HomeController::class,'cash_order']);
-
-route::get('/search',[AdminController::class,'searchdata']);
 
 route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
 

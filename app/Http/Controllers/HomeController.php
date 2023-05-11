@@ -239,7 +239,6 @@ public function add_comment(Request $request)
     }
 }
 
-
 public function stripe($totalprice)
 {
 
