@@ -18,6 +18,7 @@ class AdminController extends Controller
         return view('admin.catagory',compact('data'));
     }
 
+
     public function add_catagory(Request $request)
     {
         $data=new catagory;
@@ -26,6 +27,7 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Catagory Added Successfully');
     }
 
+
     public function delete_catagory($id)
     {
         $data=catagory::find($id);
@@ -33,11 +35,13 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Catagory Deleted Successfully');
     }
 
+
     public function view_product()
     {
         $catagory=catagory::all();
         return view('admin.product',compact('catagory'));
     }
+
     public function add_product(Request $request)
     {
         $product=new product;
@@ -59,11 +63,13 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Product Added Successfully');
     }
 
+
     public function show_product()
     {
         $product=product::all();
         return view('admin.show_product',compact('product'));
     }
+
 
     public function delete_product($id)
     {
@@ -72,6 +78,7 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message','Product Deleted Successfully');
     }
+
 
     public function update_product($id)
     {
@@ -82,6 +89,7 @@ class AdminController extends Controller
         return view('admin.update_product',compact('product','catagory'));
 
     }
+
 
     public function update_product_confirm(Request $request,$id)
     {
@@ -106,6 +114,7 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Product Updated Successfully');
     }
 
+
     public function order()
     {
         $order=order::all();
@@ -114,7 +123,12 @@ class AdminController extends Controller
     }
 
 
+    public function searchdata(Request $request)
+    {
+        $searchText=$request->search;
+        $order=order::where('name','LIKE',"%$searchText%")->orWhere('phone','LIKE',"%$searchText%")->orWhere('product_title','LIKE',"%$searchText%")->get();
 
+<<<<<<< HEAD
     public function delivered($id)
     {
 
@@ -135,5 +149,9 @@ class AdminController extends Controller
 
 
 
+=======
+    return view('admin.order',compact('order'));
+    }
+>>>>>>> f6046d9de2257d2b3c174073c70f22d56e7f6476
 
 }
