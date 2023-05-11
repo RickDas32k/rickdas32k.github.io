@@ -127,8 +127,10 @@ class AdminController extends Controller
     {
         $searchText=$request->search;
         $order=order::where('name','LIKE',"%$searchText%")->orWhere('phone','LIKE',"%$searchText%")->orWhere('product_title','LIKE',"%$searchText%")->get();
-
-<<<<<<< HEAD
+        
+        return view('admin.order',compact('order'));
+    }
+    
     public function delivered($id)
     {
 
@@ -145,13 +147,4 @@ class AdminController extends Controller
 
 
     }
-
-
-
-
-=======
-    return view('admin.order',compact('order'));
-    }
->>>>>>> f6046d9de2257d2b3c174073c70f22d56e7f6476
-
 }
