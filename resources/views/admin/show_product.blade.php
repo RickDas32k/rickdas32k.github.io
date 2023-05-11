@@ -21,7 +21,7 @@
         }
 
         .img_size{
-            width: 250px;
+            width: 150px;
             height: 140px;
         }
 
