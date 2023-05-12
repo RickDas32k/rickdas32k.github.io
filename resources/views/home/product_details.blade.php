@@ -18,77 +18,84 @@
       <!-- font awesome style -->
       <link href="home/css/font-awesome.min.css" rel="stylesheet" />
       <!-- Custom styles for this template -->
-      <link href="home/css/style.css" rel="stylesheet" />
+      <link href="home/css/new.css" rel="stylesheet" />
+
+      <link rel="stylesheet" href="home/css/product.css">
+
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
    </head>
    <body>
+
+   @include('sweetalert::alert')
       <div class="hero_area">
          <!-- header section strats -->
          @include('home.header')
          <!-- end header section -->
-      <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto; width: 50%; padding: 30px;">
-                  <div class="box">
 
-                     <div class="img-box" style="pad: 20px;">
-                        <img src="product/{{$product->image}}" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           {{$product->title}}
-                        </h5>
-                        @if($product->discount_price!=null)
-                        <h6 style="color: red">
-                        Discount Price<br>
-                           ₹{{$product->discount_price}}
-                        </h6>
-                        
-                        <h6 style="text-decoration: line-through; color: blue">
-                        Price<br>
-                           ₹{{$product->price}}
-                        </h6>
-                        @else
-                        <h6 style="color: blue">
-                        Price<br>
-                           ₹{{$product->price}}
-                        </h6>
-                        @endif
-                        <h6>Product Catagory : {{$product->catagory}}</h6>
-                        <h6>Product Details : {{$product->description}}</h6>
-                        <h6>Available Quantity : {{$product->quantity}}</h6>
-                        <form action="{{url('add_cart',$product->id)}}" method="Post">
-
-                              @csrf
-
-                              <div class="row">
-
-                                 <div class="col-md-4">
-
-                                    <input type="number" name="Quantity" value="1" min="1" style="width: 100px"> 
-
-                                 </div>
-                              
-                                 <div class="col-md-4">
-
-                                    <input type="submit" value="Add to Cart">
-                                 </div>
-
-                              </div>
-
-                        </form>
-                     </div>
-                  </div>
+         
+         <div class="container-2 single-product">
+         <div class="row">
+               <div class="col-new">
+                  <img src="product/{{$product->image}}" id="productimg">
                </div>
+               <div class="col-2">
+                  <p>Home / {{$product->title}}</p>
+                  <h1>{{$product->title}}</h1>
+                  
+                  @if($product->discount_price!=null)
+                           <H4 style="color: red">
+                           Discount Price<br>
+                              ₹{{$product->discount_price}}
+                           </H4>
+                           
+                           <H4 style="text-decoration: line-through; color: blue">
+                           Price<br>
+                              ₹{{$product->price}}
+                           </H4>
+                           @else
+                           <H4 style="color: blue">
+                           Price<br>
+                              ₹{{$product->price}}
+                           </H4>
+                           @endif
+                  <div class="btn-add2">
+                  <form action="{{url('add_cart',$product->id)}}" method="Post">
+
+                     @csrf
+
+
+                           
+
+                     <input type="number" name="Quantity" value="1" min="1" style="width: 100px">         
+                           <br>
+                     
+                        <input type="submit" value="Add to Cart"></a>
+               
+                     
+                  </form>
+                  </div>
+                  <h3>Product Details <i class="fas fa-indent"></i></h3>
+               
+                  <p><b>Catagory:</b> {{$product->catagory}}</p>
+                  <div class="des">
+                  <p><b>Details:</b>  {{$product->description}}</p>
+                  </div>
+                  <p><b>Available Quantity:</b>  {{$product->quantity}}</p>
+               </div>
+         </div>
+         </div>
+         
+         
+      </div>
+
+
       <!-- footer start -->
       @include('home.footer')
       <!-- footer end -->
-      <div class="cpy_">
-         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-         
-            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-         
-         </p>
-      </div>
+      @include('home.chin')
       <!-- jQery -->
       <script src="home/js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->

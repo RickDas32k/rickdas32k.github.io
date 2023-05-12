@@ -38,7 +38,27 @@ class HomeController extends Controller
         $usertype=Auth::user()->usertype;
         if($usertype=='1')
         {
-            return view('admin.home');
+            $total_product=product::all()->count();
+
+            $total_order=order::all()->count();
+
+            $total_user=user::all()->count();
+
+            $order=order::all();
+
+            $total_revenue=0;
+
+            foreach($order as $order)
+
+            {
+                $total_revenue=$total_revenue + $order->price;
+            }
+
+            $total_delivered=order::where('delivery_status','=','delivered')->get()->count();
+
+            $total_processing=order::where('delivery_status','=','processing')->get()->count();
+
+            return view('admin.home',compact('total_product','total_order','total_user','total_revenue','total_delivered','total_processing'));
         }
         else{
             $product=Product::paginate(10);
@@ -59,9 +79,42 @@ class HomeController extends Controller
      {
          $user=Auth::user();
 
+         $userid=$user->id;
+
          $product=product::find($id);
 
-         $cart=new cart;
+         $product_exist_id=cart::where('Product_id','=',$id)->where('user_id','=',$userid)->get('id')->first();
+
+         if($product_exist_id)
+         {
+            $cart=cart::find($product_exist_id)->first();
+
+            $quantity=$cart->quantity;
+
+            $cart->quantity=$quantity + $request->quantity;
+
+            if($product->discount_price!=null)
+
+         {
+            $cart->price=$product->discount_price * $cart->quantity;
+         }
+
+         else
+
+         {
+
+            $cart->price=$product->price * $cart->quantity;
+
+         }
+
+            $cart->save();
+
+            return redirect()->back()->with('message','Product Added Successfully');
+         }
+
+         else
+         {
+            $cart=new cart;
 
          $cart->name=$user->name;
 
@@ -101,7 +154,10 @@ class HomeController extends Controller
 
          Alert::success('Product Added Successfully','We have Added product to the cart');
 
-         return redirect()->back();
+         return redirect()->back()->with('message','Product Added Successfully');;
+         }
+
+         
 
         
      }
@@ -255,6 +311,11 @@ public function stripePost(Request $request,$totalprice)
         Session::flash('success', 'Payment successful!');
               
         return back();
+    }
+    public function product()
+    {
+        $product=Product::paginate(10);
+        return view('home.all_product',compact('product'));
     }
 
     public function product_search(Request $request)

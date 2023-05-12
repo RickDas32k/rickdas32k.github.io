@@ -10,6 +10,8 @@ use App\Models\Product;
 
 use App\Models\Order;
 
+use PDF;
+
 class AdminController extends Controller
 {
     public function view_catagory()
@@ -127,8 +129,33 @@ class AdminController extends Controller
     {
         $searchText=$request->search;
         $order=order::where('name','LIKE',"%$searchText%")->orWhere('phone','LIKE',"%$searchText%")->orWhere('product_title','LIKE',"%$searchText%")->get();
+        
+        return view('admin.order',compact('order'));
+    }
+    
+    public function delivered($id)
+    {
 
-    return view('admin.order',compact('order'));
+
+        $order=order::find($id);
+
+        $order->delivery_status="delivered";
+
+        $order->payment_status='Paid';
+
+        $order->save();
+
+        return redirect()->back();
+
+
     }
 
+    public function print_pdf($id)
+    {
+        $order=order::find($id);
+
+        $pdf=PDF::loadView('admin.pdf',compact('order'));
+
+        return $pdf->download('order_details.pdf');
+    }
 }
