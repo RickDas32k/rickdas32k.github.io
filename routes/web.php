@@ -60,6 +60,8 @@ route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
 
 route::post('/add_comment',[HomeController::class,'add_comment']);
 
+route::post('/add_reply',[HomeController::class,'add_reply']);
+
 route::get('/cash_order',[HomeController::class,'cash_order']);
 
 route::get('/search',[AdminController::class,'searchdata']);
