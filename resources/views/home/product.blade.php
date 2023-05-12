@@ -4,11 +4,11 @@
                <h2>
                   Our <span>products</span>
                </h2>
-<<<<<<< HEAD
+
             <br><br>
                <div>
                   <form action="{{url('product_search')}}" method="GET">
-=======
+
             </div>
             @if(session()->has('message'))
             <div class="alert alert-success">
@@ -18,7 +18,6 @@
             </div>
             @endif
             <div class="row">
->>>>>>> f2b35ab2b2924604b1cc0498627495c09e285984
 
                      @csrf
 
@@ -27,7 +26,6 @@
                   </form>
                </div>
             </div> 
-
       <div class="row">
          @foreach($product as $products)
             <div class="col-sm-6 col-md-4 col-lg-4">
