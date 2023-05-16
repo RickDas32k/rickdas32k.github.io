@@ -131,7 +131,7 @@
             <td>
 
             @if($order->delivery_status=='processing')
-            <a herf="{{url('delivered',$order->id)}}" onclick="return confirm('Are you sure this product is delivered !!!')" class="btn btn-primary">Delivered</a>
+            <a class="btn btn-primary" herf="{{url('delivered',$order->id)}}">Delivered</a>
 
             @else
 

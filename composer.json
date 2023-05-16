@@ -14,7 +14,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^2.11",
         "realrashid/sweet-alert": "^7.0",
-        "stripe/stripe-php": "*"
+        "stripe/stripe-php": "^10.13"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

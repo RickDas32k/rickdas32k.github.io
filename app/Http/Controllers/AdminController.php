@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 use App\Models\Catagory;
 
 use App\Models\Product;
@@ -139,7 +141,7 @@ class AdminController extends Controller
 
         $order=order::find($id);
 
-        $order->delivery_status="delivered";
+        $order->delivery_status="Delivered";
 
         $order->payment_status='Paid';
 
