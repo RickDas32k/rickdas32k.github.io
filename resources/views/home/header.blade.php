@@ -13,8 +13,8 @@
                        <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span class="caret"></span></a>
                            <ul class="dropdown-menu">
-                              <li><a href="about.html">About</a></li>
-                              <li><a href="testimonial.html">Testimonial</a></li>
+                              <li><a href="{{url('about')}}">About</a></li>
+                              <li><a href="{{url('testimonals')}}">Testimonial</a></li>
                            </ul>
                         </li>
                         <li class="nav-item">

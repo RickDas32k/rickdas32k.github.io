@@ -50,9 +50,11 @@ route::post('/update_product_confirm/{id}',[AdminController::class,'update_produ
 
 route::get('/order',[AdminController::class,'order']);
 
-
-
 route::get('/print_pdf/{id}',[AdminController::class,'print_pdf']);
+
+route::get('/send_email/{id}',[AdminController::class,'send_email']);
+
+route::post('/send_user_email/{id}',[AdminController::class,'send_user_email']);
 
 route::get('/delivered/{id}',[AdminController::class,'delivered']);
 
@@ -79,6 +81,10 @@ route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
 route::post('stripe/{totalprice}',[HomeController::class,'stripePost'])->name('stripe.post');
 
 route::get('/products',[HomeController::class,'product']);
+
+route::get('/testimonals',[HomeController::class,'testimonal']);
+
+route::get('/about',[HomeController::class,'about']);
 
 route::get('/show_order',[HomeController::class,'show_order']);
 

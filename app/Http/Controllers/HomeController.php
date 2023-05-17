@@ -28,7 +28,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $product=Product::paginate(10);
+        $product=Product::paginate(9);
         $comment=comment::orderby('id','desc')->get();
         $reply=reply::all();
         return view('home.userpage',compact('product','comment','reply'));
@@ -61,7 +61,7 @@ class HomeController extends Controller
             return view('admin.home',compact('total_product','total_order','total_user','total_revenue','total_delivered','total_processing'));
         }
         else{
-            $product=Product::paginate(10);
+            $product=Product::paginate(9);
             $comment=comment::orderby('id','desc')->get();
             $reply=reply::all();
             return view('home.userpage',compact('product','comment','reply'));
@@ -314,14 +314,14 @@ public function stripePost(Request $request,$totalprice)
     }
     public function product()
     {
-        $product=Product::paginate(10);
+        $product=Product::paginate(9);
         return view('home.all_product',compact('product'));
     }
 
     public function product_search(Request $request)
     {
         $search_text=$request->search;
-        $product=product::where('title','LIKE',"%$search_text%")->orWhere('catagory','LIKE',"%$search_text")->paginate(10);
+        $product=product::where('title','LIKE',"%$search_text%")->orWhere('catagory','LIKE',"%$search_text")->paginate(9);
 
         return view('home.userpage',compact('product'));
     }
@@ -355,6 +355,16 @@ public function stripePost(Request $request,$totalprice)
         $order->save();
         
         return redirect()->back();
+    }
+
+    public function testimonal()
+    {
+        return view('home.testimonal');
+    }
+
+     public function about()
+    {
+        return view('home.about');
     }
 
 }

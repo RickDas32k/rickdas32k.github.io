@@ -25,6 +25,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" 
       integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- Font Awesome cdn link -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
    </head>
    <body>
@@ -53,7 +55,7 @@
 
        <!-- Comment and Reply system starts here -->
        <div style="text-align: center; padding-bottom: 30px;">
-         <h1 style="font-size: 30px; text-align: center; padding-top: 20px; padding-bottom: 20px;">Comments</h1>
+         <h1 style="font-size: 40px; text-align: center; font-weight: bolder; padding-top: 20px; padding-bottom: 20px;">Comments</h1>
 
       <form action="{{url('add_comment')}}" method="POST">
 
@@ -66,12 +68,12 @@
       </div>
 
       <div style="padding-left: 20%;">
-         <h1 style="font-size: 20px; padding-bottom: 20px;">All Comments</h1>
+         <h1 style="font-size: 40px;font-weight: bolder; padding-bottom: 20px;">All Comments</h1>
 
       @foreach($comment as $comment)
 
          <div>
-            <b>{{$comment->name}}</b>
+            <b><i class="fa-solid fa-user fa-xl"></i>  {{$comment->name}}</b>
             <p>{{$comment->comment}}</p>
 
             <a style="color: blue;" href="javascript::void(0);" onclick="reply(this)" data-Commentid="{{$comment->id}}">Reply</a>
@@ -81,7 +83,7 @@
             @if($rep->comment_id==$comment->id)
 
             <div style="padding-left: 3%; padding-bottom: 20px;">
-               <b>{{$rep->name}}</b>
+               <b><i class="fa-solid fa-circle-user"></i>  {{$rep->name}}</b>
                <p>{{$rep->reply}}</p>
                <a style="color: blue;" href="javascript::void(0);" onclick="reply(this)" data-Commentid="{{$comment->id}}">Reply</a>
             </div>

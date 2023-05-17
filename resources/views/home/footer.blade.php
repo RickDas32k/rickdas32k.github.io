@@ -7,9 +7,9 @@
                         <a href="#"><img width="210" src="images/logo.png" alt="#" /></a>
                       </div>
                       <div class="information_f">
-                        <p><strong>ADDRESS:</strong> Chuchura, Hooghly, WB, India</p>
-                        <p><strong>MOBILE:</strong> +91 62X XXX XXXX</p>
-                        <p><strong>EMAIL:</strong> yourfamms@gmail.com</p>
+                        <p><strong><i class="fa-solid fa-location-dot fa-lg"></i>  ADDRESS:</strong> Chuchura, Hooghly, WB, India</p>
+                        <p><strong><i class="fa-solid fa-phone fa-lg"></i>  MOBILE:</strong> +91 62X XXX XXXX</p>
+                        <p><strong><i class="fa-solid fa-square-envelope fa-lg"></i>  EMAIL:</strong> yourfamms@gmail.com</p>
                       </div>
                    </div>
                </div>
@@ -21,12 +21,12 @@
                      <div class="widget_menu">
                         <h3>Menu</h3>
                         <ul>
-                           <li><a href="#">Home</a></li>
-                           <li><a href="#">About</a></li>
-                           <li><a href="#">Services</a></li>
-                           <li><a href="#">Testimonial</a></li>
-                           <li><a href="#">Blog</a></li>
-                           <li><a href="#">Contact</a></li>
+                           <li><a href="#"><i class="fa-solid fa-house fa-lg"></i>  Home</a></li>
+                           <li><a href="#"><i class="fa-solid fa-circle-info fa-lg"></i>  About</a></li>
+                           <li><a href="#"><i class="fa-solid fa-headphones fa-lg"></i>  Services</a></li>
+                           <li><a href="#"><i class="fa-solid fa-message fa-lg"></i>  Testimonial</a></li>
+                           <li><a href="#"><i class="fa-brands fa-microblog fa-lg"></i>  Blog</a></li>
+                           <li><a href="#"><i class="fa-solid fa-address-book fa-lg"></i>  Contact</a></li>
                         </ul>
                      </div>
                   </div>
@@ -34,12 +34,11 @@
                      <div class="widget_menu">
                         <h3>Account</h3>
                         <ul>
-                           <li><a href="http://localhost:8000/user/profile">Account</a></li>
-                           <li><a href="#">Checkout</a></li>
-                           <li><a href="#">Login</a></li>
-                           <li><a href="#">Register</a></li>
-                           <li><a href="#">Shopping</a></li>
-                           <li><a href="#">Widget</a></li>
+                           <li><a href="#"><i class="fa-solid fa-user-check fa-lg"></i>  Checkout</a></li>
+                           <li><a href="#"><i class="fa-solid fa-right-to-bracket fa-lg"></i>  Login</a></li>
+                           <li><a href="#"><i class="fa-solid fa-registered fa-lg"></i>  Register</a></li>
+                           <li><a href="#"><i class="fa-solid fa-bag-shopping fa-lg"></i>  Shopping</a></li>
+                           <li><a href="#"><i class="fa-solid fa-panorama fa-lg"></i>  Widget</a></li>
                         </ul>
                      </div>
                   </div>
