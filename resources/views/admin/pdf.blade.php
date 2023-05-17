@@ -18,7 +18,7 @@
 <body>
 
 
-<div class="container">
+
 <div class="row">
         <div class="col-lg-12">
             <div class="card">
@@ -86,10 +86,8 @@
                                     <tr>
                                         <th scope="row">01</th>
                                         <td>
-                                            <div>
-                                                <h5 class="text-truncate font-size-14 mb-1">{{$order->product_title}}</h5>
-                                                
-                                            </div>
+                                            <h5 class="text-truncate font-size-14 mb-1">{{$order->product_title}}</h5>
+                                           
                                         </td>
                                         <td>MRP. {{$order->price}}/-</td>
                                         <td>{{$order->quantity}}</td>
@@ -116,6 +114,5 @@
             </div>
         </div><!-- end col -->
     </div>
-</div>
 </body>
 </html>

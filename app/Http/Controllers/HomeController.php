@@ -350,7 +350,7 @@ public function stripePost(Request $request,$totalprice)
     {
         $order=order::find($id);
 
-        $order->delivery_status='Your Order is Canceled';
+        $order->delivery_status='This Order is Canceled';
 
         $order->save();
         

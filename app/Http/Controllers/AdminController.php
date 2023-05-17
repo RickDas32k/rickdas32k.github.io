@@ -14,6 +14,8 @@ use App\Models\Order;
 
 use PDF;
 
+use Carbon\Carbon;
+
 use Notification;
 
 use App\Notifications\SendEmailNotification;
@@ -164,7 +166,9 @@ class AdminController extends Controller
 
         $pdf=PDF::loadView('admin.pdf',compact('order'));
 
-        return $pdf->download('order_details.pdf');
+        $todayDate = Carbon::now()->format('d-m-Y');
+
+        return $pdf->download('Invoice-'.$order->id.'-'.$todayDate.'.pdf');
     }
 
     public function send_email($id)
