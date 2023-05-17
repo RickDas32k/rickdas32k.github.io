@@ -89,3 +89,7 @@ route::get('/about',[HomeController::class,'about']);
 route::get('/show_order',[HomeController::class,'show_order']);
 
 route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
+
+route::get('/contact',[HomeController::class,'contact']);
+
+route::post('/contact_us',[HomeController::class,'contact_us']);

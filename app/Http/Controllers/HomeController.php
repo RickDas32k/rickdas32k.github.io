@@ -24,6 +24,8 @@ use Session;
 
 use Stripe;
 
+use App\Models\Contact;
+
 class HomeController extends Controller
 {
     public function index()
@@ -365,6 +367,31 @@ public function stripePost(Request $request,$totalprice)
      public function about()
     {
         return view('home.about');
+    }
+
+    public function contact()
+    {
+        return view('home.contact');
+    }
+
+    public function contact_us(Request $request)
+    {
+        if(Auth::id())
+    {
+        $contact=new contact;
+        $contact->first_name=$request->first_name;
+        $contact->last_name=$request->last_name;
+        $contact->email=$request->email;
+        $contact->phone=$request->phone;
+        $contact->subject=$request->subject;
+        $contact->message=$request->message;
+        
+        $contact->save();
+        return redirect()->back()->with('message','SUBMITTED SUCCESSFULLY');
+    }
+    else{
+        return redirect('login');
+    }
     }
 
 }
