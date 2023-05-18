@@ -34,6 +34,7 @@
                      <div class="widget_menu">
                         <h3>Account</h3>
                         <ul>
+                        <li><a href="#"><i class="fa-solid fa-user fa-lg"></i>  Account</a></li>
                            <li><a href="#"><i class="fa-solid fa-user-check fa-lg"></i>  Checkout</a></li>
                            <li><a href="#"><i class="fa-solid fa-right-to-bracket fa-lg"></i>  Login</a></li>
                            <li><a href="#"><i class="fa-solid fa-registered fa-lg"></i>  Register</a></li>

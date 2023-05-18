@@ -322,10 +322,12 @@ public function stripePost(Request $request,$totalprice)
 
     public function product_search(Request $request)
     {
+        $comment=comment::orderby('id','desc')->get();
+        $reply=reply::all();
         $search_text=$request->search;
         $product=product::where('title','LIKE',"%$search_text%")->orWhere('catagory','LIKE',"%$search_text")->paginate(9);
 
-        return view('home.userpage',compact('product'));
+        return view('home.userpage',compact('product','comment','reply'));
     }
 
     public function show_order()
