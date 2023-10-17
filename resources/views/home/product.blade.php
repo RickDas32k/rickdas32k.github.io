@@ -8,7 +8,10 @@
             <br><br>
                <div>
                   <form action="{{url('product_search')}}" method="GET">
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
             </div>
             @if(session()->has('message'))
             <div class="alert alert-success">
@@ -18,6 +21,10 @@
             </div>
             @endif
             <div class="row">
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
                      @csrf
 

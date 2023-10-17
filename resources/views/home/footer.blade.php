@@ -34,7 +34,11 @@
                      <div class="widget_menu">
                         <h3>Account</h3>
                         <ul>
+<<<<<<< Updated upstream
                         <li><a href="#"><i class="fa-solid fa-user fa-lg"></i>  Account</a></li>
+=======
+                           <li><a href="http://localhost:8000/user/profile"><i class="fa-solid fa-house-user fa-lg"></i>  Account</a></li>
+>>>>>>> Stashed changes
                            <li><a href="#"><i class="fa-solid fa-user-check fa-lg"></i>  Checkout</a></li>
                            <li><a href="#"><i class="fa-solid fa-right-to-bracket fa-lg"></i>  Login</a></li>
                            <li><a href="#"><i class="fa-solid fa-registered fa-lg"></i>  Register</a></li>
@@ -49,7 +53,7 @@
                      <div class="widget_menu">
                         <h3>Newsletter</h3>
                         <div class="information_f">
-                          <p>Subscribe by our newsletter and get update protidin.</p>
+                          <p>Subscribe by our newsletter and get update every day.</p>
                         </div>
                         <div class="form_sub">
                            <form>

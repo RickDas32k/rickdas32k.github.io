@@ -328,6 +328,7 @@ public function stripePost(Request $request,$totalprice)
         $product=product::where('title','LIKE',"%$search_text%")->orWhere('catagory','LIKE',"%$search_text")->paginate(9);
 
         return view('home.userpage',compact('product','comment','reply'));
+<<<<<<< Updated upstream
     }
 
     public function show_order()
@@ -394,6 +395,8 @@ public function stripePost(Request $request,$totalprice)
     else{
         return redirect('login');
     }
+=======
+>>>>>>> Stashed changes
     }
 
 }

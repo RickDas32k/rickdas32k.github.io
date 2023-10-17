@@ -28,6 +28,7 @@
       <!-- Font Awesome cdn link -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
    </head>
    <body>
 
@@ -55,7 +56,11 @@
 
        <!-- Comment and Reply system starts here -->
        <div style="text-align: center; padding-bottom: 30px;">
+<<<<<<< Updated upstream
          <h1 style="font-size: 40px; text-align: center; font-weight: bolder; padding-top: 20px; padding-bottom: 20px;">Comments</h1>
+=======
+         <h1 style="font-size: 30px; text-align: center; padding-top: 20px; padding-bottom: 20px;">Comments  <i class="fa-solid fa-comments fa-2xs"></i></h1>
+>>>>>>> Stashed changes
 
       <form action="{{url('add_comment')}}" method="POST">
 
@@ -68,7 +73,11 @@
       </div>
 
       <div style="padding-left: 20%;">
+<<<<<<< Updated upstream
          <h1 style="font-size: 40px;font-weight: bolder; padding-bottom: 20px;">All Comments</h1>
+=======
+         <h1 style="font-size: 30px; padding-bottom: 20px;">All Comments <i class="fa-solid fa-comment-dots fa-xs"></i></h1>
+>>>>>>> Stashed changes
 
       @foreach($comment as $comment)
 
@@ -76,13 +85,17 @@
             <b><i class="fa-solid fa-user fa-xl"></i>  {{$comment->name}}</b>
             <p>{{$comment->comment}}</p>
 
-            <a style="color: blue;" href="javascript::void(0);" onclick="reply(this)" data-Commentid="{{$comment->id}}">Reply</a>
+            <a style="color: blue;" href="javascript::void(0);" onclick="reply(this)" data-Commentid="{{$comment->id}}">Reply</a><br><br>
 
             @foreach($reply as $rep)
 
             @if($rep->comment_id==$comment->id)
 
+<<<<<<< Updated upstream
             <div style="padding-left: 3%; padding-bottom: 20px;">
+=======
+            <div style="padding-left: 5%; padding-bottom: 20px;">
+>>>>>>> Stashed changes
                <b><i class="fa-solid fa-circle-user"></i>  {{$rep->name}}</b>
                <p>{{$rep->reply}}</p>
                <a style="color: blue;" href="javascript::void(0);" onclick="reply(this)" data-Commentid="{{$comment->id}}">Reply</a>
